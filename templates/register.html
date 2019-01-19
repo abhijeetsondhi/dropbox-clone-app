@@ -1,0 +1,16 @@
+{% include 'base.html' %}
+<main>
+ <h1> Please enter the username and password to register</h1>
+ {% if flag === 2 %}
+ <p> Please enter some other username </p>
+ {% endif %}
+ <form method="post" action="/registerUser">
+ <br>
+ <label>Enter Your Name</label><br>
+ <input type="text" name="firstName" placeholder="Enter first name..." required>
+ <br>
+  <label>Enter Your Password</label>
+  <br>
+ <input type="password" name="password" placeholder="Enter password..." required>
+ <input type="submit" value="Register">
+</main>

@@ -1,0 +1,16 @@
+{% include 'base.html' %}
+<main>
+<h4>File names for <b>{{ user }}</b></h4>
+</title>
+</head>
+<body>
+{% if ans.length === 0 %}
+<p> Your storage is empty </p>
+{% else %}
+<ul class="list-group">
+ {% for x in ans %}
+ <li class="list-group-item"> <a href={{x.link}}> {{x.name}} </a> <form class="but" method="post" action="/delete/{{x.name}}"><input type="submit" value="Delete"></form>  </li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+</main>
